@@ -1,8 +1,8 @@
-Full tutorial: Full tutorial: https://itnext.io/build-grpc-server-with-golang-go-step-by-step-b3f5abcf9e0e
+Full tutorial: https://itnext.io/build-grpc-server-with-golang-go-step-by-step-b3f5abcf9e0e
 
 ---
 
-Install the protocol buffer compiler and Go plugins (check [the official docs](https://grpc.io/docs/languages/go/quickstart/ 'the official docs')) for updated versions)
+Install the protocol buffer compiler and Go plugins (check [the official docs](https://grpc.io/docs/languages/go/quickstart/ 'the official docs') for updated versions)
 
 ```
 brew install protobuf
@@ -14,7 +14,6 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
 Add environment variables to `.zshrc`
 
 ```
-# Go
 export GO_PATH=~/go
 export PATH=$PATH:$GO_PATH/bin
 ```
