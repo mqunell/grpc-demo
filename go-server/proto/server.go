@@ -1,10 +1,10 @@
-package tutorial
+package server
 
 import context "context"
 
 // Define a server struct that implements the server interface
 type Server struct {
-	UnimplementedTutorialServer
+	UnimplementedTutorialServiceServer
 }
 
 // Implement the SayHello method of the server interface

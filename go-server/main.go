@@ -1,7 +1,7 @@
 package main
 
 import (
-	"grpc-tutorial/tutorial"
+	server "grpc-tutorial/proto" // <proto go_package and server.go package> "<go.mod module>/<directory>"
 	"log"
 	"net"
 
@@ -11,13 +11,13 @@ import (
 func main() {
 	println("Go gRPC server")
 
-	lis, err := net.Listen("tcp", ":9000")
+	lis, err := net.Listen("tcp", ":9001")
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
 
 	s := grpc.NewServer()
-	tutorial.RegisterTutorialServer(s, &tutorial.Server{})
+	server.RegisterTutorialServiceServer(s, &server.Server{})
 	if err := s.Serve(lis); err != nil {
 		log.Fatalf("Failed to server: %v", err)
 	}
